@@ -18,7 +18,7 @@ const swiper = new Swiper('#carousel-swiper', {
     },
     modules: [Navigation, Pagination, Autoplay],
     loop: false,
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
     breakpoints: {
         999: {

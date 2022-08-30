@@ -1,5 +1,5 @@
 .header {
-  transition: width .1s ease, height .1s ease;
+  transition: all .1s ease-out;
   .header-top {
     display: flex;
     justify-content: space-between;
@@ -19,24 +19,69 @@
     .header-right-content {
       display: flex;
       align-items: center;
+
+      .address {
+        font-size: $indent15;
+        color: $colorMidGray;
+        margin-right: $indent15;
+      }
+
+      .time {
+        font-size: $indent15;
+        color: $colorMidGray;
+        margin-right: $indent15;
+      }
+
+      .phone-call {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .phone {
+          font-size: $indent15;
+          color: $colorSecondary;
+          margin-bottom: $indent4;
+          text-decoration: none;
+          transition: all .1s;
+
+          &:hover {
+            color: $colorSecondaryHover;
+            text-decoration: revert;
+            transition: all .1s;
+          }
+        }
+      }
     }
   }
 
   .header-lower {
-    background-color: $colorSecondary;
+    background-color: #efefef;
+    border-bottom: 1px solid #d3d3d3;
 
     .item-list {
       display: flex;
       justify-content: space-around;
       .item {
-        color: $colorWhite;
-        text-decoration: none;
         padding: 20px 10px;
-        font-size: 16px;
-        cursor: pointer;
 
-        &:hover {
-          color: #95a1ff;
+        .link {
+          color: $colorSecondary;
+          cursor: pointer;
+          font-size: 16px;
+          text-decoration: none;
+          transition: .1s ease-in-out;
+          font-weight: bold;
+
+          &:hover {
+            color: $colorSecondaryHover;
+          }
+
+          .text {
+
+            &:hover {
+              border-bottom: 1px solid $colorSecondaryHover;
+            }
+          }
         }
       }
     }
