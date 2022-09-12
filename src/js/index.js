@@ -11,7 +11,7 @@ $(function () {
 });
 
 //swiper
-const swiper = new Swiper('#carousel-swiper', {
+const swiper = new Swiper('.main-slider', {
     effect: 'slide',
     fadeEffect: {
         crossFade: true
@@ -26,12 +26,12 @@ const swiper = new Swiper('#carousel-swiper', {
         },
     },
     navigation: {
-        nextEl: '.carousel-button-next',
-        prevEl: '.carousel-button-prev',
+        nextEl: '.main-button-next',
+        prevEl: '.main-button-prev',
         clickable: true,
     },
     pagination: {
-        el: '.carousel-slider-pagination',
+        el: '.main-swiper-pagination',
         type: 'bullets',
         clickable: true,
     },

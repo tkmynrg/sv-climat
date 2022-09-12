@@ -1,101 +1,180 @@
-.carousel-catalog {
-  padding-left: 60px;
-  padding-right: 60px;
-  position: relative;
+.main-content {
+  padding: 20px 20px 20px 0;
+  display: flex;
+  justify-content: space-between;
 
-  .swiper-slider {
-    display: block;
+  .main-slider {
     position: relative;
-    overflow: hidden;
-  }
+    width: 70%;
+    margin-left: 0;
 
-  .carousel-swiper {
-    .item {
+    .swiper-slide {
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slide {
+      height: 400px;
+
       .photo {
         background-position: 50%;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         display: block;
-        padding-top: 70%;
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
       }
     }
-  }
 
-  .carousel-nav {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 50px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
+    .main-slider-nav {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      z-index: 1;
+      cursor: pointer;
 
-    &.swiper-button-lock {
-      visibility: hidden;
+      &.swiper-button-lock {
+        visibility: hidden;
+      }
+
+      &.swiper-button-disabled {
+        opacity: .5;
+        cursor: default;
+      }
+
+      &.main-button-next {
+        right: 10px;
+      }
+
+      &.main-button-prev {
+        left: 10px;
+      }
+
+      .icon-arrow {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorWhite;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+
+        .icon {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          height: 20px;
+          width: 20px;
+        }
+      }
     }
 
-    &.swiper-button-disabled {
-      opacity: .5;
-      cursor: default;
-    }
-
-    &.carousel-button-next {
-      right: 0;
-    }
-
-    &.carousel-button-prev {
+    .swiper-pagination {
+      display: block;
+      position: absolute;
       left: 0;
-    }
+      bottom: 50px;
+      margin: 60px auto 0 auto;
+      text-align: center;
+      width: 100%;
+      z-index: 1;
 
-    .icon-arrow-left:before {
-      content: "";
-      background-image: url('../img/icons/icon-arrow-left.png');
-      background-position: 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 30px;
-      height: 50px;
-      display: block;
-    }
+      @include mobile {
+        margin-top: 30px;
+      }
 
-    .icon-arrow-right:before {
-      content: "";
-      background-image: url('../img/icons/icon-arrow-right.png');
-      background-position: 50%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 30px;
-      height: 50px;
-      display: block;
-    }
-  }
-
-  .swiper-pagination {
-    display: block;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin: 60px auto 0 auto;
-    text-align: center;
-
-    @include mobile {
-      margin-top: 30px;
-    }
-
-    &-lock {
-      visibility: hidden;
-    }
+      &-lock {
+        visibility: hidden;
+      }
 
 
-    &-bullet {
-      border: 1px solid transparentize(#263B3F, 0.8);
-      transform: scale(1);
-      &-active {
-        transform: scale(1);
-        border-color: $colorPrimary;
+      &-bullet {
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+        height: 18px;
+        margin: 0 2px;
+        opacity: .8;
+        transform: scale(.6);
+        transition: all .2s ease;
+        vertical-align: top;
+        width: 18px;
+
+        &-active {
+          transform: scale(1);
+          border-color: $colorPrimary;
+          background-color: $colorSecondary
+        }
       }
     }
   }
+
+  .main-product {
+    align-content: space-between;
+    display: flex;
+    flex-direction: column;
+    width: 28.5%;
+
+    .main-product-item {
+      height: 50%;
+
+      &.first {
+        margin-bottom: 15px;
+      }
+
+      .item {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        height: 100%;
+        text-decoration: none;
+
+        &:hover {
+          .img {
+            background-size: 110%;
+            filter: brightness(0.5);
+          }
+        }
+
+        .img {
+          background-position: 50%;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          bottom: 0;
+          height: 100%;
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: all .4s;
+          filter: brightness(0.9);
+          border-radius: 8px;
+        }
+
+        .item-name {
+          position: absolute;
+          bottom: 10px;
+          color: white;
+          left: 20px;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
 }
+
