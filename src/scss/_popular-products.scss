@@ -1,0 +1,47 @@
+.popular-products {
+  .pupular-products-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -10px;
+
+    .item {
+      min-height: 262px;
+      padding: 20px;
+      transition: .2s;
+      box-shadow: 0 8px 15px rgb(0 0 0 / 15%);
+      flex: 0 1 25%;
+      margin: 0 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-content: space-around;
+
+      &:hover {
+        transform: translateY(-4px);
+
+        .title {
+          a {
+            color: $colorSecondaryHover;
+            transition: .2s;
+          }
+        }
+      }
+
+      .img {
+
+      }
+
+      .title {
+        a {
+          text-decoration: none;
+          font-size: $indent16;
+          font-weight: 600;
+          color: $colorPrimary;
+        }
+      }
+
+
+    }
+  }
+}

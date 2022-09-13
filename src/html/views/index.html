@@ -4,7 +4,7 @@ themeClass: "",
 }; %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
 <div class="body">
-    <div class="section no-padding-vertical main-block">
+    <div class="section no-padding-vertical main-block gray">
         <div class="container">
             <div class="main-content">
                 <div class="main-slider swiper">
@@ -66,57 +66,104 @@ themeClass: "",
             </div>
         </div>
 
-
-
-
-
-
-
-<!--        <div class="main-bg lozad" data-background-image="./img/main-bg.jpg"></div>-->
-    </div>
-    <div class="section advantages gray">
-        <div class="container">
-            <div class="title h2">
-                наши преимущества
+        <div class="section advantages gray no-padding-top">
+            <div class="container">
+                <div class="advantages-row">
+                    <div class="item">
+                        <div class="icon">
+                            <img data-src="/img/icons/icon-delivery.svg" alt="time" class="lozad first" src="/img/icons/icon-delivery.svg"
+                                 data-loaded="true">
+                        </div>
+                        <div class="description">
+                            Прямые поставки
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img data-src="/img/icons/icon-air-conditioner.svg" alt="time" class="lozad first" src="/img/icons/icon-air-conditioner.svg"
+                                 data-loaded="true">
+                        </div>
+                        <div class="description">
+                            "Климат под ключ":
+                            подбор, монтаж, ремонт
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img data-src="/img/icons/icon-service.svg" alt="time" class="lozad first" src="/img/icons/icon-service.svg"
+                                 data-loaded="true">
+                        </div>
+                        <div class="description">
+                            Сервисный центр - быстро и качественно
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="icon">
+                            <img data-src="/img/icons/icon-builder.svg" alt="time" class="lozad first" src="/img/icons/icon-builder.svg"
+                                 data-loaded="true">
+                        </div>
+                        <div class="description">
+                            Профессионалы в штате - лучшая гарантия!
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="advantages-row">
+        </div>
+
+    <div class="section popular-products">
+        <div class="container">
+            <div class="title h2 text-align-left">
+                Популярные категории
+            </div>
+            <div class="pupular-products-row">
                 <div class="item">
-                    <div class="icon">
-                        <img data-src="/img/icons/cup.svg" alt="time" class="lozad first" src="/img/icons/cup.svg"
-                             data-loaded="true">
+                    <div class="img">
+                        <a href="#1" class="link">
+                            <img data-src="/img/main-content/split-system.jpg" alt="time" class="lozad first" src="/img/main-content/split-system.svg">
+                        </a>
                     </div>
-                    <div class="subtitle">
-                        Делимся опытом
-                    </div>
-                    <div class="text">
-                        Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны,
-                        переплыли Босфор, готовятся к соревнованиям по триатлону!
+                    <div class="title">
+                        <a href="#1" class="link">Сплит-системы</a>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="icon">
-                        <img data-src="/img/icons/heart.svg" alt="time" class="lozad first" src="/img/icons/heart.svg"
-                             data-loaded="true">
+                    <div class="img">
+                        <a href="#1" class="link">
+                            <img data-src="/img/main-content/multi-split.jpg" alt="time" class="lozad first" src="/img/main-content/multi-split.jpg">
+                        </a>
                     </div>
-                    <div class="subtitle">
-                        Заботимся о здоровье
-                    </div>
-                    <div class="text">
-                        Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость
-                        Вам и Вашим близким!
+                    <div class="title">
+                        <a href="#1" class="link">Мультисплит системы</a>
                     </div>
                 </div>
                 <div class="item">
-                    <div class="icon">
-                        <img data-src="/img/icons/shoe.svg" alt="time" class="lozad first" src="/img/icons/shoe.svg"
-                             data-loaded="true">
+                    <div class="img">
+                        <a href="#1" class="link">
+                            <img data-src="/img/main-content/breazer.png" alt="time" class="lozad first" src="/img/main-content/breazer.png">
+                        </a>
                     </div>
-                    <div class="subtitle">
-                        Учим бегать
+                    <div class="title">
+                        <a href="#1" class="link">Сплит-системы</a>
                     </div>
-                    <div class="text">
-                        Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a
-                            class="color-red" href="#1">I LOVE RUNNING</a>.
+                </div>
+                <div class="item">
+                    <div class="img">
+                        <a href="#1" class="link">
+                            <img data-src="/img/main-content/split-system.jpg" alt="time" class="lozad first" src="/img/icons/icon-delivery.svg">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#1" class="link">Сплит-системы</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="img">
+                        <a href="#1" class="link">
+                            <img data-src="/img/main-content/split-system.jpg" alt="time" class="lozad first" src="/img/icons/icon-delivery.svg">
+                        </a>
+                    </div>
+                    <div class="title">
+                        <a href="#1" class="link">Сплит-системы</a>
                     </div>
                 </div>
             </div>
@@ -126,10 +173,10 @@ themeClass: "",
         <div class="container">
             <div class="consultation-content">
                 <div class="title h2 color-white text-align-left">
-                    Получите бесплатную консультацию<br> по подбору пульсометра
+                    Получите бесплатную консультацию<br> по подбору кондицонера
                 </div>
                 <div class="description">
-                    Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут
+                    Просто заполните форму заявки <br> и мы перезвоним вам!
                 </div>
                 <form id="consultation-form" class="feed-form" action="#1">
                     <input name="f_name" required placeholder="Ваше имя" type="text" data-inputmask-regex="[a-za-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?">
