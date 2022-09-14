@@ -1,0 +1,17 @@
+.main-about {
+  display: flex;
+  align-items: center;
+
+  .main-about-left {
+    flex: 0 1 25%;
+    margin-right: 20px;
+    
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .main-about-right {
+    font-size: $indent16;
+  }
+}

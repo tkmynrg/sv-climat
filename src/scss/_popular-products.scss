@@ -6,7 +6,7 @@
     margin: 0 -10px;
 
     .item {
-      min-height: 262px;
+      min-height: 220px;
       padding: 20px;
       transition: .2s;
       box-shadow: 0 8px 15px rgb(0 0 0 / 15%);
@@ -29,6 +29,12 @@
       }
 
       .img {
+
+        .link {
+          img {
+            max-width: 140px;
+          }
+        }
 
       }
 
