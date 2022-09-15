@@ -71,3 +71,8 @@ $xs-mobile: 376px;
     @content;
   }
 }
+@mixin xxs-desktop  {
+  @media (min-width: #{$desktop}) and (max-width: #{$desktop-smaller}) {
+    @content;
+  }
+};

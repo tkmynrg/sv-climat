@@ -11,7 +11,7 @@ $(function () {
 });
 
 //swiper
-const swiper = new Swiper('.main-slider', {
+const mainSwiper = new Swiper('.main-slider', {
     effect: 'slide',
     fadeEffect: {
         crossFade: true
@@ -37,32 +37,24 @@ const swiper = new Swiper('.main-slider', {
     },
 });
 
-// //swiper
-// const advantagesSwiper = new Swiper('.advantages-swiper', {
-//     effect: 'slide',
-//     fadeEffect: {
-//         crossFade: true
-//     },
-//     modules: [Navigation, Pagination, Autoplay],
-//     loop: false,
-//     slidesPerView: 4,
-//     spaceBetween: 20,
-//     breakpoints: {
-//         999: {
-//             slidesPerView: 4,
+// const reviewSwiper = new Swiper( '#reviews-swiper',
+//     {
+//         loop: true,
+//         preloadImages: false,
+//         autoHeight: true,
+//         modules: [Navigation, Pagination],
+//         pagination: {
+//             el: '.reviews-slider-pagination',
+//             type: 'bullets',
+//             clickable: true
 //         },
-//     },
-//     navigation: {
-//         nextEl: '.main-button-next',
-//         prevEl: '.main-button-prev',
-//         clickable: true,
-//     },
-//     pagination: {
-//         el: '.main-swiper-pagination',
-//         type: 'bullets',
-//         clickable: true,
-//     },
-// });
+//         navigation: {
+//             nextEl: '.reviews-slider-button-next',
+//             prevEl: '.reviews-slider-button-prev'
+//         },
+//     });
+
+
 
 //show content
 function toggleSlide(item) {
