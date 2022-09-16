@@ -1,9 +1,9 @@
 .main-about {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 
   .main-about-left {
-    flex: 0 1 30%;
+    flex: 0 1 25%;
     margin-right: 20px;
     
     img {
@@ -13,11 +13,5 @@
 
   .main-about-right {
     font-size: $indent16;
-
-    p {
-      &:first-child {
-        margin-top: 0;
-      }
-    }
   }
 }

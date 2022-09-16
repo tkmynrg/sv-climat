@@ -1,152 +1,39 @@
 .reviews {
-  margin: 32px 0 0 0;
-
-  .slider {
-    margin: 0;
-    background: #fff;
-    border: 1px solid #EFF3F6;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
+  margin-top: 50px;
   .item {
-    display: block;
-    position: relative;
-    z-index: 3;
-    margin: 0;
-    padding: 32px 32px 32px 188px;
-    min-height: 238px;
-
-    @include only-mobile {
-      padding: 22px 16px;
-    }
-
-    .user {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-
-      @include only-mobile {
-        margin-bottom: 16px;
-      }
-    }
+    display: flex;
+    margin-bottom: 50px;
 
     .photo {
-      flex-shrink: 0;
-      display: block;
-      position: absolute;
-      left: 32px;
-      top: 32px;
-      margin: 0;
-      width: 124px;
-      height: 174px;
-      background-position: center center;
+      background-position: 50%;
       background-repeat: no-repeat;
       background-size: cover;
-      border-radius: 8px;
-
-      @include only-mobile {
-        left: auto;
-        top: auto;
-        position: static;
-        margin-right: 30px;
-        width: 78px;
-        height: 109px;
-      }
-
-      @include xs-mobile {
-        margin-right: 16px;
-      }
-    }
-
-    .name {
-      margin: 0;
-      font-weight: 600;
-      font-size: 18px;
-      line-height: 158.69%;
-      color: #39444D;
-    }
-    .text {
-      margin: 0;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 179.19%;
-      color: #869099;
-    }
-
-    .comment {
-      margin: 0;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 179.19%;
-      color: #39444D;
-    }
-  }
-}
-
-.slider-wrapper {
-  position: relative;
-  z-index: 10;
-  margin: 0;
-
-  .swiper-pagination-v2 {
-    margin: 16px 0 0 0;
-    font-size: 0;
-    text-align: center;
-
-    &.white-bullets {
-      .swiper-pagination-bullet {
-        background: $colorWhite;
-
-        &-active {
-          background: #006CC4;
-        }
-      }
-    }
-
-    .swiper-pagination-bullet {
-      margin: 0 6px;
-      width: 10px;
-      height: 10px;
-      background: #CED4DA;
       border-radius: 50%;
-      opacity: 1;
+      flex-shrink: 0;
+      height: 169px;
+      margin-right: 60px;
+      width: 169px;
+    }
 
-      &-active {
-        background: #006CC4;
+    .info {
+
+      .name {
+        color: $colorBlack;
+        font-size: $indent18;
+        font-weight: 700;
       }
-    }
-  }
 
-  .swiper-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    margin: -30px 0 0 0;
-    width: 60px;
-    height: 60px;
-    background: #FFFFFF;
-    border: 1px solid #EFF3F6;
-    font-size: 18px;
-    color: #A3ACB5;
-    cursor: pointer;
-    border-radius: 50%;
+      .achievements {
+        color: #646464;
+        font-size: $indent14;
+      }
 
-    &-prev {
-      left: -84px;
-    }
-    &-next {
-      right: -84px;
-    }
-
-    @include xxs-desktop {
-      display: none;
-    }
-
-    @include mobile {
-      display: none;
+      .text {
+        color: $colorBlack;
+        font-weight: 300;
+        font-size: $indent16;
+        line-height: $indent24;
+      }
     }
   }
 }
