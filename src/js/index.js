@@ -4,6 +4,15 @@ import lozad from "lozad";
 import 'jquery-validation';
 import 'inputmask';
 
+$('#mobile_menu .level-2').on('click', 'a', function () {
+    $('.toggle-mobile-menu-button').trigger('click');
+})
+
+$('.mobile-menu-back').on('click', function() {
+    $('html').removeClass('open-mobile-menu-level-2');
+    return false;
+});
+
 //lazyload
 $(function () {
     const observer = lozad();

@@ -201,35 +201,7 @@ const config = {
         new CompressionPlugin({
             test: /\.js(\?.*)?$/i,
         }),
-        // new ImageMinimizerPlugin({
-        //   minimizerOptions: {
-        //     // Lossless optimization with custom option
-        //     // Feel free to experiment with options for better result for you
-        //     aplugins: [
-        //       ["gifsicle", { interlaced: true }],
-        //       ["jpegtran", { progressive: true }],
-        //       ["optipng", { optimizationLevel: 5 }],
-        //       // Svgo configuration here https://github.com/svg/svgo#configuration
-        //       [
-        //         "svgo",
-        //         {
-        //           aplugins: extendDefaultPlugins([
-        //             {
-        //               name: "removeViewBox",
-        //               active: false,
-        //             },
-        //             {
-        //               name: "addAttributesToSVGElement",
-        //               params: {
-        //                 attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
-        //               },
-        //             },
-        //           ]),
-        //         },
-        //       ],
-        //     ],
-        //   },
-        // }),
+
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',

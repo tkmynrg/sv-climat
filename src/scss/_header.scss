@@ -55,13 +55,30 @@
   }
 
   .header-lower {
-    background: linear-gradient(180deg,#00ace9,#0093d7 42.19%,#0087ce 63.54%,#0075c2 81.77%,#005aae);
+    background-color: transparent;
     border-bottom: 1px solid #d3d3d3;
+    position: relative;
+
+    &:after {
+      background-color: rgb(86 141 225 / 31%);
+      position: absolute;
+      content: "";
+      inset: 0px;
+      backdrop-filter: blur(70px);
+      pointer-events: none;
+      z-index: 0;
+      transition-timing-function: ease;
+      transition-duration: 0.3s;
+      transition-property: background-color;
+    }
 
     .item-list {
       display: flex;
       justify-content: space-around;
       .item {
+        display: block;
+        position: relative;
+        z-index: 800;
         padding: 20px 10px;
 
         .link {
@@ -83,6 +100,73 @@
             }
           }
         }
+
+        .submenu {
+          display: block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          margin: -10000px 0 0 0;
+          padding: 23px 0 0 0;
+          opacity: 0;
+          transition: opacity .3s;
+          white-space: nowrap;
+
+          .items {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+
+            .submenu-link {
+              display: block;
+              margin: 0;
+              font-size: 14px;
+              line-height: 179.19%;
+              font-weight: 400;
+              color: #39444D;
+              white-space: nowrap;
+              text-decoration: none;
+              outline: none;
+
+              .text {
+                border-bottom: 1px dashed transparent;
+              }
+              .remark {
+                color: #869099;
+              }
+
+              &:not(:first-child) {
+                margin-top: 8px;
+              }
+
+              @include desktop {
+                &:hover {
+                  .text {
+                    border-color: #E7E7E7;
+                  }
+                }
+              }
+            }
+          }
+
+          .divider {
+            margin: 8px 0 0 0;
+            height: 1px;
+            background: #EFF3F6;
+          }
+        }
+
+        &:hover {
+          .submenu {
+            margin-top: 0;
+            opacity: 1;
+          }
+        }
+
       }
     }
   }
