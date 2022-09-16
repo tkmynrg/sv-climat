@@ -1,0 +1,34 @@
+<% var data = {
+title: "Sw-climat",
+themeClass: "",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="body pik">
+    <div class="section gray no-padding-top">
+        <div class="main-block">
+            <div class="main-block-info">
+                Есть все условия для комфортной работы для жителей ГК ПИК
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="catalog-products">
+            <div class="catalog-products-row">
+                <div class="item">
+                    <div class="card">
+                        <div class="card-stickers-wrapper">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
