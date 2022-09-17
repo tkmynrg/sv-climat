@@ -34,6 +34,16 @@
     }
   }
 
+  .advantages-row {
+    .item {
+      flex: 0 1 33%;
+
+      .description {
+        max-width: 310px;
+      }
+    }
+  }
+
   .catalog-products {
     margin-right: -1px;
     margin-bottom: -1px;
@@ -55,6 +65,10 @@
           position: relative;
 
           .card-stickers-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 9px;
+            margin-top: 15px;
 
             .card-badges {
               display: grid;
@@ -81,9 +95,98 @@
                 }
 
                 &.mega-sale {
+                  color: $colorBlack;
                   background-color: $colorYellow;
                 }
               }
+            }
+
+            .card-stickers {
+              flex-direction: column;
+              display: flex;
+              align-items: flex-end;
+
+              .square {
+                color: #fff;
+                font-size: 13px;
+                font-weight: 900;
+                min-width: 27px;
+                padding: 2px 5px;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: #88403c;
+                margin-bottom: 4px;
+                transform: skew(5deg) rotate(5deg);
+              }
+
+              .type {
+                color: #fff;
+                font-size: 13px;
+                font-weight: 900;
+                min-width: 27px;
+                padding: 2px 5px;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: $colorPrimaryHover;
+                margin-bottom: 4px;
+                transform: skew(5deg) rotate(5deg);
+              }
+            }
+          }
+
+          .card-image-wrapper {
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+
+            .card-image-link  {
+              position: relative;
+              display: block;
+            }
+          }
+
+          .card-name-wrapper {
+            display: grid;
+            padding: 0 16px;
+            margin-bottom: 15px;
+
+            .card-name {
+              font-size: $indent16;
+              color: $colorSecondary;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              font-weight: 300;
+            }
+          }
+
+          .card-price {
+            padding: 0 16px;
+            margin-bottom: 15px;
+
+            .card-price-title {
+              font-size: 19px;
+              font-weight: 700;
+              color: $colorSecondary;
+              line-height: 1;
+            }
+
+            .card-price-amount {
+              font-size: 19px;
+              font-weight: 900;
+              color: $colorSecondary;
+              line-height: 1;
+            }
+          }
+
+          .card-button {
+            padding: 0 16px;
+            margin-bottom: 15px;
+
+            a {
+              width: 100%;
             }
           }
         }
