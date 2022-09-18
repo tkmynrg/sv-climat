@@ -69,6 +69,7 @@
             justify-content: space-between;
             gap: 9px;
             margin-top: 15px;
+            min-height: 70px;
 
             .card-badges {
               display: grid;
@@ -85,6 +86,7 @@
                 text-align: center;
                 color: $colorWhite;
                 min-width: 27px;
+                max-height: 21px;
 
                 &.new {
                   background-color: $colorGreen;
@@ -138,6 +140,7 @@
             width: 200px;
             margin: 0 auto;
             margin-bottom: 30px;
+            min-height: 137px;
 
             .card-image-link  {
               position: relative;
@@ -149,9 +152,10 @@
             display: grid;
             padding: 0 16px;
             margin-bottom: 15px;
+            text-align: center;
 
             .card-name {
-              font-size: $indent16;
+              font-size: $indent20;
               color: $colorSecondary;
               -webkit-line-clamp: 2;
               -webkit-box-orient: vertical;
@@ -165,16 +169,18 @@
           .card-price {
             padding: 0 16px;
             margin-bottom: 15px;
+            min-height: 48px;
+            text-align: center;
 
             .card-price-title {
-              font-size: 19px;
+              font-size: 16px;
               font-weight: 700;
               color: $colorSecondary;
               line-height: 1;
             }
 
             .card-price-amount {
-              font-size: 19px;
+              font-size: 16px;
               font-weight: 900;
               color: $colorSecondary;
               line-height: 1;
@@ -187,6 +193,7 @@
 
             a {
               width: 100%;
+              padding: 10px;
             }
           }
         }
