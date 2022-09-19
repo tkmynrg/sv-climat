@@ -44,11 +44,46 @@
   }
 
   .advantages-row {
+
+    @include only-mobile {
+      justify-content: normal;
+      flex-wrap: wrap;
+    }
+
     .item {
       flex: 0 1 33%;
 
+      @include desktop-smaller {
+        justify-content: center;
+        flex-direction: column;
+        min-height: 123px;
+      }
+
+      @include mobile {
+        justify-content: center;
+        flex-direction: column;
+        min-height: 123px;
+      }
+
+      @include only-mobile {
+        flex: 0 1 100%;
+        margin-bottom: 10px;
+      }
+
+      .icon {
+        margin-right: 8px;
+      }
+
       .description {
         max-width: 310px;
+
+        @include desktop-smaller {
+          text-align: center;
+        }
+
+        @include mobile {
+          text-align: center;
+        }
       }
     }
   }

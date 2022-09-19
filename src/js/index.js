@@ -4,20 +4,17 @@ import lozad from "lozad";
 import 'jquery-validation';
 import 'inputmask';
 
-$('#mobile_menu .level-2').on('click', 'a', function () {
-    $('.toggle-mobile-menu-button').trigger('click');
-})
+import {initMobileMenu} from "./components/mobile-menu";
 
-$('.mobile-menu-back').on('click', function() {
-    $('html').removeClass('open-mobile-menu-level-2');
-    return false;
-});
+initMobileMenu();
 
 //lazyload
 $(function () {
     const observer = lozad();
     observer.observe();
 });
+
+const divs = $('body').find('div.lozad');
 
 //swiper
 const swiper = new Swiper('.main-slider', {
