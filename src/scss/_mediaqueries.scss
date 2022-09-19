@@ -1,6 +1,7 @@
 $mobile: 999px;
 $mobileSmall: 359px;
 $mobileLandscape: 999px;
+$medium-tablet: 555px;
 $tablet: 767px;
 $desktop: 1000px;
 $desktop-smaller: 1250px;
@@ -46,6 +47,14 @@ $xs-mobile: 376px;
     @content;
   }
 };
+
+@mixin only-small-mobile  {
+  @media (max-width: #{$medium-tablet})
+  {
+    @content;
+  }
+};
+
 @mixin mobile-small  {
   @media (max-width: #{$mobileSmall})
   {
