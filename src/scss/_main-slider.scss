@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
 
+  @include mobile {
+    padding: 75px 0;
+  }
+
   .main-slider {
     position: relative;
     width: 70%;

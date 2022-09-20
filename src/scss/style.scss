@@ -1,6 +1,6 @@
 @import 'fonts';
-@import "node_modules/swiper/swiper";
-@import "node_modules/swiper/modules/effect-fade/effect-fade";
+@import 'node_modules/swiper/swiper';
+@import 'node_modules/swiper/modules/effect-fade/effect-fade';
 @import 'mediaqueries';
 @import 'variables';
 @import 'typographic';
@@ -9,6 +9,7 @@
 @import 'base';
 @import 'buttons';
 @import 'header';
+@import 'header-mobile';
 @import 'main-about';
 @import 'advantages-block';
 @import 'popular-products';

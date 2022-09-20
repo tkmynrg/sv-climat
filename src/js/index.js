@@ -4,17 +4,64 @@ import lozad from "lozad";
 import 'jquery-validation';
 import 'inputmask';
 
-import {initMobileMenu} from "./components/mobile-menu";
+import {MobileMenu} from "./components/mobile-menu";
 
-initMobileMenu();
+let currentScroll = $(window).scrollTop();
 
-//lazyload
-$(function () {
+$( document ).ready(function() {
+    const mobileMenu = new MobileMenu();
+
+    //lazyload
     const observer = lozad();
     observer.observe();
+
+    headerAnimate();
+
+    $(window).on('scroll', function() {
+        headerAnimate();
+    });
+
+    const divs = $('body').find('div.lozad');
+
+    $('body').on('click', '.mobile-menu-toggle-button', function () {
+        mobileMenu.toggle();
+        return false;
+    });
+
+    //Открыть и закрыть контент на странице
+    $('[data-toggle-btn]').click(function () {
+        //Условие для аккордеона, чтобы открывалась только одна секция
+        if ($(this).parents('[data-toggle-holder]').hasClass('one')) {
+            $('[data-toggle-btn]').not($(this)).removeClass('active')
+            $('[data-hidden-content]').not($(this).next()).slideUp(300)
+        }
+
+        // просто спойлер
+        if ($(this).parents('[data-toggle-holder]').hasClass('once')) {
+            $(this).addClass('hide')
+        }
+
+        $(this).toggleClass('active').next().slideToggle(300)
+    })
+
+
 });
 
-const divs = $('body').find('div.lozad');
+function headerAnimate() {
+    const wHeight = $(window).height();
+    const newScroll = $(window).scrollTop();
+
+    if (newScroll > wHeight && newScroll > currentScroll) {
+        $('body').addClass('hide-header');
+    } else {
+        $('body').removeClass('hide-header');
+    }
+
+    currentScroll = newScroll;
+}
+
+
+
 
 //swiper
 const swiper = new Swiper('.main-slider', {
@@ -43,33 +90,6 @@ const swiper = new Swiper('.main-slider', {
     },
 });
 
-// //swiper
-// const advantagesSwiper = new Swiper('.advantages-swiper', {
-//     effect: 'slide',
-//     fadeEffect: {
-//         crossFade: true
-//     },
-//     modules: [Navigation, Pagination, Autoplay],
-//     loop: false,
-//     slidesPerView: 4,
-//     spaceBetween: 20,
-//     breakpoints: {
-//         999: {
-//             slidesPerView: 4,
-//         },
-//     },
-//     navigation: {
-//         nextEl: '.main-button-next',
-//         prevEl: '.main-button-prev',
-//         clickable: true,
-//     },
-//     pagination: {
-//         el: '.main-swiper-pagination',
-//         type: 'bullets',
-//         clickable: true,
-//     },
-// });
-
 //show content
 function toggleSlide(item) {
     $(item).each(function(i) {
@@ -83,14 +103,6 @@ function toggleSlide(item) {
 toggleSlide('.more-link');
 toggleSlide('.more-link-back');
 
-//tabs
-$(function() {
-    $('ul.tab-header').on('click', 'li:not(.active)', function() {
-        $(this)
-            .addClass('active').siblings().removeClass('active')
-            .closest('div.catalog').find('div.tab-content').removeClass('active').eq($(this).index()).addClass('active');
-    });
-});
 
 //modals
 $('[data-modal=consultation]').on('click', function () {

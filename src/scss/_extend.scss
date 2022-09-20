@@ -58,3 +58,37 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+.caption-18 {
+  color: $colorWhite;
+  font-family: $fontRegular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.caption-16 {
+  @extend .caption-18;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.caption-14 {
+  @extend .caption-18;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.caption-12 {
+  @extend .caption-18;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.caption-10 {
+  @extend .caption-18;
+  font-size: 10px;
+  line-height: 12px;
+}
