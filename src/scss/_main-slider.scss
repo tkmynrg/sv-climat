@@ -3,6 +3,10 @@
   display: flex;
   justify-content: space-between;
 
+  @include only-desktop-smaller {
+    flex-wrap: wrap;
+  }
+
   @include mobile {
     padding: 75px 0;
   }
@@ -11,6 +15,10 @@
     position: relative;
     width: 70%;
     margin-left: 0;
+
+    @include only-desktop-smaller {
+      width: 100%;
+    }
 
     .swiper-slide {
       display: block;
@@ -132,8 +140,28 @@
     flex-direction: column;
     width: 28.5%;
 
+    @include only-desktop-smaller {
+      width: 100%;
+      flex-direction: row;
+      margin-top: 15px;
+    }
+
+    @include only-small-mobile {
+      flex-wrap: wrap!important;
+    }
+
     .main-product-item {
       height: 50%;
+
+      @include only-small-mobile {
+        width: 100%!important;
+      }
+
+      @include only-desktop-smaller {
+        height: 180px;
+        width: 50%;
+        padding: 0 6px;
+      }
 
       &.first {
         margin-bottom: 15px;
@@ -145,6 +173,7 @@
         text-decoration: none;
         height: 100%;
         text-decoration: none;
+
 
         &:hover {
           .img {
@@ -166,6 +195,10 @@
           transition: all .4s;
           filter: brightness(0.9);
           border-radius: 8px;
+
+          @include only-desktop-smaller {
+            background-size: cover;
+          }
         }
 
         .item-name {

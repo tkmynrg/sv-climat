@@ -26,8 +26,15 @@ $xs-mobile: 376px;
     @content;
   }
 };
+
 @mixin desktop-smaller  {
   @media (min-width: #{$desktop}) and (max-width: #{$desktop-smaller}) {
+    @content;
+  }
+};
+
+@mixin only-desktop-smaller  {
+  @media (max-width: #{$desktop-smaller}) {
     @content;
   }
 };
