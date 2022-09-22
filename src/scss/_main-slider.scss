@@ -29,6 +29,10 @@
     .slide {
       height: 400px;
 
+      @include only-mobile {
+        height: 250px;
+      }
+
       .photo {
         background-position: 50%;
         background-repeat: no-repeat;
@@ -153,14 +157,15 @@
     .main-product-item {
       height: 50%;
 
-      @include only-small-mobile {
-        width: 100%!important;
-      }
-
       @include only-desktop-smaller {
         height: 180px;
         width: 50%;
         padding: 0 6px;
+      }
+
+      @include only-small-mobile {
+        width: 100%;
+        height: 150px;
       }
 
       &.first {
