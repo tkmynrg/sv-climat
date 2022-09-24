@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 -10px;
+    padding: 15px 0;
 
     .item {
       min-height: 220px;
@@ -48,6 +48,58 @@
       }
 
 
+    }
+
+    .main-slider-nav {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      z-index: 1;
+      cursor: pointer;
+
+      &.swiper-button-lock {
+        visibility: hidden;
+      }
+
+      &.swiper-button-disabled {
+        opacity: .5;
+        cursor: default;
+      }
+
+      &.main-button-next {
+        right: 10px;
+      }
+
+      &.main-button-prev {
+        left: 10px;
+      }
+
+      .icon-arrow {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $colorWhite;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+
+        .icon {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          display: block;
+          height: 20px;
+          width: 20px;
+        }
+      }
     }
   }
 }

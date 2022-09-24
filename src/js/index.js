@@ -5,6 +5,7 @@ import 'jquery-validation';
 import 'inputmask';
 
 import {MobileMenu} from "./components/mobile-menu";
+import {initMainPageLanding} from "./landings/mainPage";
 
 let currentScroll = $(window).scrollTop();
 
@@ -43,6 +44,10 @@ $( document ).ready(function() {
 
         $(this).toggleClass('active').next().slideToggle(300)
     })
+
+    if ($('#main_page').length) {
+        initMainPageLanding();
+    }
 
 
 });

@@ -7,7 +7,8 @@
 
     @include mobile {
       flex-wrap: wrap;
-      justify-content: normal;
+      align-items: center;
+      justify-content: center;
     }
 
     .item {
@@ -32,7 +33,8 @@
       }
 
       @include mobile {
-        flex: 0 1 50%;
+        flex: 0 1 48%;
+        margin: 5px;
       }
 
       @include  only-desktop-smaller {
@@ -40,6 +42,11 @@
         flex-direction: column;
       }
 
+      @include only-small-mobile {
+        flex: 0 1 100%;
+        min-height: 80px;
+        padding: 10px;
+      }
 
       .icon {
         max-width: 45px;
