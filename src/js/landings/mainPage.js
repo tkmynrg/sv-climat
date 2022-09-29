@@ -1,11 +1,17 @@
-import Swiper, {Navigation, Pagination, Autoplay} from 'swiper';
+import Swiper, {Navigation, Autoplay} from 'swiper';
 
 export function initMainPageLanding() {
     function initShopSwiper() {
         new Swiper('#popular-product-swiper', {
-            slidesPerView: "4",
+            slidesPerView: 4,
+            modules: [Navigation, Autoplay],
+            loop: false,
             breakpoints: {
                 320: {
+                    slidesPerView: 1
+                },
+
+                375: {
                     slidesPerView: 2
                 },
 
@@ -18,8 +24,8 @@ export function initMainPageLanding() {
                 }
             },
             navigation: {
-                nextEl: '.main-button-next',
-                prevEl: '.main-button-prev',
+                nextEl: '.main-button-next-popular',
+                prevEl: '.main-button-prev-popular',
                 clickable: true,
             }
         });

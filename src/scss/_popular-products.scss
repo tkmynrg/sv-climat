@@ -33,6 +33,7 @@
         .link {
           img {
             max-width: 140px;
+            width: 100%;
           }
         }
 
@@ -60,7 +61,7 @@
       top: 50%;
       transform: translateY(-50%);
       font-size: 20px;
-      z-index: 1;
+      z-index: 2;
       cursor: pointer;
 
       &.swiper-button-lock {
@@ -72,12 +73,12 @@
         cursor: default;
       }
 
-      &.main-button-next {
-        right: 10px;
+      &.main-button-next-popular {
+        right: 0px;
       }
 
-      &.main-button-prev {
-        left: 10px;
+      &.main-button-prev-popular {
+        left: 0px;
       }
 
       .icon-arrow {
@@ -85,7 +86,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $colorWhite;
+        background-color: $colorLightGray;
         width: 40px;
         height: 40px;
         border-radius: 50%;
