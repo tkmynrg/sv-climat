@@ -6,8 +6,62 @@
     display: flex;
     align-content: space-between;
 
+    @include only-mobile {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .column {
       flex: 0 1 33%;
+
+      @include only-mobile {
+        flex: 0 1 100%;
+      }
+
+      .item {
+        font-size: $indent15;
+        color: $colorPrimary;
+        padding: 5px 0;
+
+        @include only-mobile {
+          text-align: center;
+        }
+
+        .title {
+
+          a {
+            text-decoration: none;
+            color: $colorPrimary;
+
+
+            &:hover {
+              color: $colorDarkGray;
+            }
+          }
+        }
+      }
     }
+  }
+
+  .footer-social-block {
+
+    .social-row {
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: $colorSecondary;
+        margin-top: -1px;
+      }
+    }
+  }
+
+  .footer-info {
+    margin: 15px 0;
   }
 }
