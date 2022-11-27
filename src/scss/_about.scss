@@ -1,0 +1,18 @@
+.about {
+  .about-row {
+    display: flex;
+
+    .img {
+      width: 40%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .text {
+      margin-left: 10px;
+      width: 60%;
+    }
+  }
+}
