@@ -1,181 +1,67 @@
 .catalog {
-
-  .tab-header{
-    margin-top: 35px;
+  .catalog-row {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 0;
-    padding-left: 0;
+    padding: 15px 0;
+    flex-wrap: wrap;
 
-    .tab-header-item {
-      width: 220px;
-      border: 2px solid $colorMidGray;
-      color: $colorDarkGray;
-      font-size: 18px;
-      font-weight: 400;
-      text-transform: uppercase;
+    .item  {
+      min-height: 220px;
+      padding: 20px;
+      transition: .2s;
+      flex: 0 1 20%;
       text-align: center;
-      line-height: 48px;
-      list-style: none;
-      transform: skew(-25deg);
-      margin: 0 5px;
-      cursor: pointer;
-      transition: all .2s;
+      display: flex;
+      flex-direction: column;
+      align-content: space-around;
+      border: 1px solid #ececec;
+
+      @include only-desktop-smaller {
+        flex: 0 1 25%;
+      }
+
+      @include mobile {
+        flex: 0 1 33%;
+      }
+
+      @include only-mobile  {
+        flex: 0 1 50%;
+      }
+
+      @include only-small-mobile  {
+        flex: 0 1 100%;
+      }
 
       &:hover {
-        box-shadow: 2px 2px 20px $colorRed;
-      }
+        box-shadow: 0 8px 15px rgb(0 0 0 / 15%);
 
-      &.active {
-        color: $colorWhite;
-        background-color: $colorRed;
-        border: none;
-      }
-
-      div {
-        transform: skew(25deg);
-      }
-
-
-    }
-  }
-
-  .tab-content {
-    display: flex;
-    margin: 60px -8px 20px;
-    flex-wrap: wrap;
-    display: none;
-
-    &.active {
-      display: flex;
-    }
-
-    .tab-content-item {
-      border: 2px solid $colorSecondary;
-      min-height: 440px;
-      width: calc(33% - 16px);
-      margin: 8px;
-
-      .more-link {
-        text-transform: uppercase;
-        color: $colorRed;
-        font-size: 14px;
-        text-align: center;
-        margin: 10px 0px 17px 0px;
-        display: block;
-        transition: all .2s;
-
-        &-back {
-          text-transform: uppercase;
-          color: $colorRed;
-          font-size: 14px;
-          text-align: center;
-          margin: 10px 0px 17px 0px;
-          display: block;
-          transition: all .2s;
-        }
-
-        &:hover {
-          color: #a11c1c;
-        }
-      }
-
-      .tab-content-item-wrapper {
-        overflow: hidden;
-        transition: all .2s ease;
-        position: relative;
-
-        &.show {
-          .tab-content-item-content {
-            transform: translateY(100%);
-          }
-          .tab-content-item-list {
-            top: 0;
+        .title {
+          a {
+            color: $colorSecondaryHover;
+            transition: .2s;
           }
         }
+      }
 
-        .tab-content-item-content {
-          transition: all .2s ease;
-          padding: 20px 20px 15px;
+      .img {
 
-          .tab-content-img {
-            background-position: 50%;
-            background-repeat: no-repeat;
-            background-size: contain;
-            display: block;
+        .link {
+          img {
+            max-width: 140px;
             width: 100%;
-            padding-top: 70%;
-          }
-
-          .tab-content-title {
-            color: $colorBlack;
-            font-weight: 700;
-            font-size: 16px;
-            text-align: center;
-            margin-top: 10px;
-          }
-
-          .tab-content-description {
-            color: $colorBlack;
-            font-size: 14px;
-            font-weight: 300;
-            margin-top: 15px;
-            text-align: center;
+            min-height: 140px;
           }
         }
 
-        .tab-content-item-list {
-          transition: all .2s ease;
-          position: absolute;
-          top: -100%;
-          left: 0;
-          margin: 0;
-          list-style-type: none;
-          padding: 15px 15px 15px 30px;
-
-          li {
-            font-weight: 300;
-            font-size: $indent14;
-            line-height: $indent20;
-            margin-bottom: 20px;
-            position: relative;
-
-            &:last-child {
-              margin-bottom: 10px;
-            }
-
-            &:before {
-              content: '';
-              position: absolute;
-              width: 5px;
-              height: 5px;
-              background-color: $colorRed;
-              left: -15px;
-              top: 5px;
-            }
-          }
-        }
       }
 
-      .buy-block {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 27px;
-        padding: 20px 25px;
-
-        .cost {
-          text-decoration: line-through;
-          font-weight: 300;
-          font-size: 14px;
-          color: #555555;
-        }
-
-        .discount {
-          font-weight: 700;
-          font-size: 20px;
-          color: $colorBlack;
+      .title {
+        padding-top: 15px;
+        a {
+          text-decoration: none;
+          font-size: $indent16;
+          font-weight: 600;
+          color: $colorPrimary;
         }
       }
     }

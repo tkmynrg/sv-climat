@@ -1,0 +1,20 @@
+.breadcrumbs {
+  margin-top: 10px;
+  .item {
+    font-size: 13px;
+    color: $colorDarkGray;
+    cursor: default;
+    text-decoration: none;
+
+    &.link {
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+      color: $colorLink;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
