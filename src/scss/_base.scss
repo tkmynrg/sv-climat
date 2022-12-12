@@ -35,4 +35,8 @@ body {
   z-index: 100;
   width: 100%;
   transition: filter .6s ease, opacity .3s ease, transform .3s ease;
+
+  @include mobile {
+    padding-top: 75px;
+  }
 }

@@ -1,0 +1,120 @@
+.mounting {
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 0;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    color: $colorSecondaryHover;
+    font-size: 20px;
+    padding: 20px 0;
+  }
+  
+  .text-2-columns {
+    display: flex;
+    flex-direction: row;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .work {
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .materials {
+      margin-left: 20px;
+
+      @include mobile {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    
+    .title {
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+  }
+
+  .img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .text-content {
+      width: 60%;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+
+    .img {
+      width: 40%;
+      @include mobile {
+        width: 100%;
+        margin-top: 10px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+
+  }
+
+  .list-first-image {
+
+    .row {
+      display: flex;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
+
+      .img {
+        width: 40%;
+        @include mobile {
+          width: 100%;
+          margin-top: 10px;
+          order: 2;
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+      .text-content {
+        width: 60%;
+        margin-left: 10px;
+
+        @include mobile {
+          width: 100%;
+          margin-left: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+
+
+
+  }
+}

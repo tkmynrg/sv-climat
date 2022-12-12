@@ -1,0 +1,40 @@
+<% var data = {
+title: "Sw-climat",
+themeClass: "",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="body contacts">
+    <div class="section no-padding-top">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="#1" class="item link">Главная</a>
+                /
+                <a href="#1" class="item">Контакты</a>
+            </div>
+            <div class="contacts-row">
+                <div class="text">
+                    <div class="title">SW-Climat</div>
+                    <div class="subtitle">Контакты</div>
+                    <div>Адрес офиса: <span class="bold">Московская область, г. Одинцово, Можайское шоссе 18, 22Б</span></div>
+                    <div>График работы: <span class="bold">Пн.-пт. с 9:00 до 18:00</span></div>
+                    <div>Телефон: <span class="bold color-main">8-495-640-05-45</span></div>
+                    <div>Электронная почта: <span class="bold color-main">info@sw-climat.ru</span></div>
+                    <div class="subtitle">Реквизиты</div>
+                    <div>Реквизиты</div>
+                    <div>Реквизиты</div>
+                    <div>Реквизиты</div>
+                </div>
+                <div class="map">
+                    <div>Схема проезда</div>
+                    <img data-src="/img/map.jpg" alt="map" class="lozad first">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>

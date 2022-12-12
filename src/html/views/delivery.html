@@ -1,0 +1,42 @@
+<% var data = {
+title: "Sw-climat",
+themeClass: "",
+}; %>
+<%= _.template(require('./../includes/header.html').default)(data) %>
+<div class="body delivery">
+    <div class="section no-padding-top">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="#1" class="item link">Главная</a>
+                /
+                <a href="#1" class="item">Доставка</a>
+            </div>
+            <div class="delivery-row">
+                <div class="img">
+                    <img data-src="/img/delivery/delivery.jpg" alt="delivery" class="lozad first">
+                </div>
+                <div class="text">
+                    <p class="title">Доставка</p>
+                    <ul class="text">
+                        <li>Доставка производится с 9:00 до 21:00 после 100% оплаты</li>
+                        <li>Доставка кондиционеров в пределах МКАД - бесплатно.</li>
+                        <li>Доставка за МКАД - 40 руб./км.</li>
+                    </ul>
+
+                    <p class="title">Сроки доставки</p>
+                    <ul class="text">
+                        <li>Доставка осуществляется по г.Москва, а также по Московской области в течение 1-2 рабочих дней.</li>
+                        <li>За 1 час до приезда, курьер обязательно позвонит вам и предупредит о примерном времени приезда.</li>
+                    </ul>
+                    <p>Оплата производится в Российских рублях курьеру при получении любым возможным способом</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<%= _.template(require('./../includes/footer.html').default)(data) %>
