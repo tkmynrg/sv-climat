@@ -7,7 +7,7 @@
     }
 
     .img {
-      width: 40%;
+      width: 60%;
 
       @include mobile {
         width: 100%;
@@ -18,9 +18,9 @@
       }
     }
 
-    .text {
+    .content {
       margin-left: 10px;
-      width: 60%;
+      width: 40%;
 
       @include mobile {
         width: 100%;
@@ -29,6 +29,49 @@
       }
 
       .title {
+        font-size: 18px;
+        color: $colorSecondaryHover;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .payment-row {
+    margin-top: 20px;
+    display: flex;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .img {
+      width: 60%;
+
+      @include mobile {
+        width: 100%;
+        max-height: 300px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .content {
+      margin-left: 10px;
+      width: 40%;
+
+      @include mobile {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
+      .title {
+        font-size: 18px;
+        color: $colorSecondaryHover;
         &:first-child {
           margin-top: 0;
         }
