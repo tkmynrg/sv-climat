@@ -163,3 +163,13 @@ $('input[name=f_email]').inputmask( {
     showMaskOnHover: false
 });
 
+//dropdown faq
+if ($('[data-open-block]').length) {
+    $('[data-open-block]').on('click', function() {
+        var $this = $(this),
+            $parent = $this.parents('.item');
+
+        $parent.toggleClass('open');
+        return false;
+    })
+}

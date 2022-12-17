@@ -37,8 +37,14 @@
 
 .headline-3 {
   @extend .headline-1;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+
+  @include mobile {
+    font-size: 15px;
+    line-height: 25px;
+  }
 }
 
 .headline-4 {
