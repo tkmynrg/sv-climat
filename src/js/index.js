@@ -6,6 +6,7 @@ import 'inputmask';
 
 import {MobileMenu} from "./components/mobile-menu";
 import {initMainPageLanding} from "./landings/mainPage";
+import {initCatalogPageLanding} from "./pages/catalog-page";
 
 let currentScroll = $(window).scrollTop();
 

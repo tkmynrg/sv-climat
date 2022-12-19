@@ -1,0 +1,26 @@
+.price-block{
+  margin-bottom:32px;
+
+  .price-inputs-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .price-input{
+      width: 43%;
+
+      .field{
+        margin-bottom: 0;
+      }
+    }
+
+    .decorate-divider{
+      display: block;
+      width: 27px;
+      height: 1px;
+      background: #989FB1;
+    }
+  }
+}
