@@ -18,6 +18,7 @@ $( document ).ready(function() {
     observer.observe();
 
     headerAnimate();
+    initCatalogPageLanding();
 
     $(window).on('scroll', function() {
         headerAnimate();
@@ -32,12 +33,6 @@ $( document ).ready(function() {
 
     //Открыть и закрыть контент на странице
     $('[data-toggle-btn]').click(function () {
-        //Условие для аккордеона, чтобы открывалась только одна секция
-        if ($(this).parents('[data-toggle-holder]').hasClass('one')) {
-            $('[data-toggle-btn]').not($(this)).removeClass('active')
-            $('[data-hidden-content]').not($(this).next()).slideUp(300)
-        }
-
         // просто спойлер
         if ($(this).parents('[data-toggle-holder]').hasClass('once')) {
             $(this).addClass('hide')

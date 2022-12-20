@@ -53,6 +53,12 @@
   border-color: rgba(11, 25, 59, .4);
 }
 
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
 .field {
   display: block;
   position: relative;
@@ -371,4 +377,23 @@
       @extend .field-focus-state-classic;
     }
   }
+}
+
+.custom-checkbox-label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #E2E5E7;
+}
+
+.custom-checkbox-label.checked::before{
+  background-image: url('../img/icons/checked.svg');
 }

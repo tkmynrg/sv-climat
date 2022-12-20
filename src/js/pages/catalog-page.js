@@ -2,21 +2,26 @@ import 'ion-rangeslider';
 
 
 export function initCatalogPageLanding() {
+    if ($('#catalog_page_landing').length === 0) return;
+
     const $desktopRangeSlider = $("#range_slider");
+    const $mobileRangeSlider = $("#range_slider_mobile");
     const $minPriceDesktopInput = $('#min_price_desktop_input');
     const $maxPriceDesktopInput = $('#max_price_desktop_input');
     const $minPriceMobileInput = $('#min_price_mobile_input');
     const $maxPriceMobileInput = $('#max_price_mobile_input');
+
+    let $desktopRangeSliderInstance = null;
+    let $mobileRangeSliderInstance = null;
 
     let FILTER_SETTINGS = {
         minPrice: 10000,
         maxPrice: 99999,
     };
 
-    let $desktopRangeSliderInstance = null;
-    let $mobileRangeSliderInstance = null;
-
     initRangeSlider();
+    isFilterInDefaultPosition()
+    getCurrentFilterValues()
 
     function initRangeSlider() {
         let currentMinValue = FILTER_SETTINGS.minPrice;
@@ -35,11 +40,29 @@ export function initCatalogPageLanding() {
             onChange: (data) => {
                 $minPriceDesktopInput.add($minPriceMobileInput).val(data.from);
                 $maxPriceDesktopInput.add($maxPriceMobileInput).val(data.to);
-                $mobileRangeSliderInstance.update(data);
+                // $mobileRangeSliderInstance.update(data);
+            },
+        });
+
+        $mobileRangeSlider.ionRangeSlider({
+            skin: 'round',
+            type: "double",
+            min: FILTER_SETTINGS.minPrice,
+            max: FILTER_SETTINGS.maxPrice,
+            from: currentMinValue,
+            to: currentMaxValue,
+            grid: false,
+            hide_min_max: true,
+            hide_from_to: true,
+            onChange: (data) => {
+                $minPriceMobileInput.add($minPriceDesktopInput).val(data.from);
+                $maxPriceMobileInput.add($maxPriceDesktopInput).val(data.to);
+                $desktopRangeSliderInstance.update(data);
             },
         });
 
         $desktopRangeSliderInstance = $desktopRangeSlider.data("ionRangeSlider");
+        $mobileRangeSliderInstance = $mobileRangeSlider.data("ionRangeSlider");
 
         $minPriceDesktopInput.val(currentMinValue);
         $maxPriceDesktopInput.val(currentMaxValue);
@@ -137,6 +160,30 @@ export function initCatalogPageLanding() {
 
         })
 
+    }
+
+    function isFilterInDefaultPosition(){
+        const currentFilterValues = getCurrentFilterValues();
+
+        if(currentFilterValues.min !== FILTER_SETTINGS.minPrice){
+            return false;
+        }
+
+        if(currentFilterValues.max !== FILTER_SETTINGS.maxPrice){
+            return false;
+        }
+
+        return true;
+    }
+
+    function getCurrentFilterValues() {
+        const currentMin = $minPriceDesktopInput.val();
+        const currentMax = $maxPriceDesktopInput.val();
+
+        return {
+            min: +currentMin,
+            max: +currentMax,
+        }
     }
 
 

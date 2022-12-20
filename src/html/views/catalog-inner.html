@@ -3,7 +3,7 @@ title: "Sw-climat",
 themeClass: "",
 }; %>
 <%= _.template(require('./../includes/header.html').default)(data) %>
-<div class="body catalog-inner">
+<div class="body catalog-inner" id="catalog_page_landing">
     <div class="container">
         <div class="breadcrumbs">
             <a href="#1" class="item link">Главная</a>
@@ -114,20 +114,49 @@ themeClass: "",
 
                     <div class="item">
                         <a href="#" target="_blank" class="link">
-                            <span class="text">Мульти-сплит системы</span>
+                            <span class="text">Производители</span>
                         </a>
                         <a class="icon-sidebar-down" data-toggle-btn></a>
                         <div class="submenu" data-hidden-content>
-                            <a href="#" target="_blank" class="submenu-link"><span class="text">
-                Мульти сплит-системы на 2 комнаты</span></a>
-                            <a href="#" target="_blank" class="submenu-link"><span class="text">
-                Мульти сплит-системы на 3 комнаты</span></a>
-                            <a href="#" target="_blank" class="submenu-link"><span class="text">
-                Мульти сплит-системы на 4 комнаты</span></a>
-                            <a href="#" target="_blank" class="submenu-link"><span class="text">
-                Мульти сплит-системы на 5 комнат</span></a>
-                            <a href="#" target="_blank" class="submenu-link"><span class="text">
-                Мульти сплит-системы на 6 комнат</span></a>
+                            <div class="manufacturers-block">
+                                <div class="manufacturers-wrapper">
+                                    <div class="manufacturers" data-mobile-filter-manufacturers>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Aero
+                                            <input type="checkbox" class="custom-checkbox" value="Aero">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Aeronik
+                                            <input type="checkbox" class="custom-checkbox" value="Aeronik">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Airwell
+                                            <input type="checkbox" class="custom-checkbox" value="Airwell">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">AUX
+                                            <input type="checkbox" class="custom-checkbox" value="AUX">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Axioma
+                                            <input type="checkbox" class="custom-checkbox" value="Axioma">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Ballu
+                                            <input type="checkbox" class="custom-checkbox" value="Ballu">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Bosch
+                                            <input type="checkbox" class="custom-checkbox" value="Bosch">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Carrier
+                                            <input type="checkbox" class="custom-checkbox" value="Carrier">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Casarte
+                                            <input type="checkbox" class="custom-checkbox" value="Casarte">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">Centlek
+                                            <input type="checkbox" class="custom-checkbox" value="Centlek">
+                                        </label>
+                                        <label class="custom-checkbox-label" data-manufacturer="1">CherBrooke
+                                            <input type="checkbox" class="custom-checkbox" value="CherBrooke">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="item">

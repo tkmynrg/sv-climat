@@ -24,3 +24,41 @@
     }
   }
 }
+
+.manufacturers-block{
+  padding-bottom: 32px;
+  border-bottom: 1px solid #E0E0E0;
+
+
+  .manufacturers-wrapper{
+    display: flex;
+    flex-direction: column;
+
+    .manufacturers{
+      display: flex;
+      flex-direction: column;
+      max-height: 160px;
+      transition: .2s linear;
+      overflow-y: auto;
+
+      .custom-checkbox-label{
+        @extend .custom-checkbox-label;
+        @extend .body-14;
+        margin-bottom: 16px;
+        font-family: $fontLight;
+        margin-bottom: 0;
+
+        &.disabled{
+          cursor: default;
+          pointer-events: none;
+          color: #C6C8CF;
+
+          &:before{
+            background: #F5F5F5;
+          }
+        }
+      }
+    }
+
+  }
+}
