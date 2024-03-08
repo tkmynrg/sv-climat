@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html class="" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"
+      name="viewport"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#0032a0" />
+    <meta name="msapplication-TileColor" content="#0032a0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta content="#1eb53a" name="msapplication-TileColor" />
+    <title>Sw-climat</title>
+    <script defer="defer" src="./js/vendors.bundle.js"></script>
+    <script defer="defer" src="./js/polyfills.bundle.js"></script>
+    <script defer="defer" src="./js/bundle.bundle.js"></script>
+    <script defer="defer" src="./js/style.bundle.js"></script>
+    <link href="./css/style.bundle.css" rel="stylesheet" />
+  </head>
+  <body class="load">
+    <header class="header hide-mobile" id="header">
+      <div class="container header-container">
+        <div class="header-top">
+          <div class="header-left-content"><a class="logo" href="/"></a></div>
+          <div class="header-right-content">
+            <div class="address">Москва и московсская область</div>
+            <div class="time">Пн.-пт. с 9:00 до 18:00</div>
+            <div class="phone-call">
+              <a class="phone" href="tel:84999228974">+7 (499) 922-89-74</a>
+              <a class="button no-margin-vertical callback-header" data-modal="consultation">заказать звонок</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-lower menu">
+        <div class="container">
+          <div class="item-list">
+            <div class="item">
+              <a class="link" href="/catalog.html"><span class="text">Каталог</span></a>
+              <div class="submenu">
+                <div class="items">
+                  <a href="#1" class="submenu-link">Сплит системы </a><a href="#1" class="submenu-link">Кондиционеры</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="link" href="/about.html"><span class="text">О нас</span></a>
+            </div>
+            <div class="item">
+              <a class="link" href="/mounting.html"><span class="text">Монтаж</span></a>
+            </div>
+            <div class="item">
+              <a class="link" href="/services.html"><span class="text">Сервис</span></a>
+            </div>
+            <div class="item">
+              <a class="link" href="/delivery.html"><span class="text">Доставка и оплата</span></a>
+            </div>
+            <div class="item">
+              <a class="link" href="/contacts.html"><span class="text">Контакты</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile hide-desktop fixed">
+      <div class="container">
+        <div class="content">
+          <a href="/" class="logo"><img src="./img/sw-logo.svg" alt="Лого" class="img" /> </a
+          ><button class="burger mobile-menu-toggle-button hide-desktop">
+            <span class="line top"></span> <span class="line center"></span> <span class="line bottom"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile_menu" class="mobile-menu">
+      <div class="menu-list one" data-toggle-holder>
+        <div class="item">
+          <a href="#" class="link icon-down" data-toggle-btn><span class="text">Каталог</span></a>
+          <div class="submenu" data-hidden-content>
+            <a href="#" class="submenu-link"><span class="text">Сплит-системы</span></a>
+            <a href="#" class="submenu-link"><span class="text">Кондиционеры</span></a>
+            <a href="#" class="submenu-link"><span class="text">Бризеры</span></a>
+          </div>
+        </div>
+        <div class="item">
+          <a href="/about.html" target="_blank" class="link"><span class="text">О нас</span></a>
+        </div>
+        <div class="item">
+          <a href="#" target="_blank" class="link"><span class="text">Монтаж</span></a>
+        </div>
+        <div class="item">
+          <a href="#" target="_blank" class="link"><span class="text">Сервис</span></a>
+        </div>
+        <div class="item">
+          <a href="/delivery.html" target="_blank" class="link"><span class="text">Доставка и оплата</span></a>
+        </div>
+        <div class="item">
+          <a href="/contacts.html" target="_blank" class="link"><span class="text">Контакты</span></a>
+        </div>
+        <div class="item">
+          <div class="link icon-down" data-toggle-btn>ЕЩЕ <span class="bulls"></span></div>
+          <div class="submenu data-hidden-content" data-hidden-content>
+            <a href="#" class="submenu-link arrow-link small-up-right"><span class="text">Страница 1</span></a>
+            <a href="#" class="submenu-link"><span class="text">Страница 2</span></a>
+            <a href="#" class="submenu-link"><span class="text">Страница 3</span></a>
+            <a href="#" class="submenu-link"><span class="text">Страница 4</span></a>
+            <a href="#" class="submenu-link"><span class="text">Страница 5</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body faq">
+      <div class="section accordion-section">
+        <div class="container">
+          <h1 class="headline-1">Вопросы и ответы</h1>
+          <div class="headline-2">Кондиционирование</div>
+          <div class="accordion-list">
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>Можно ли установить кондиционер зимой?</h3>
+              <div class="accordion-dropdown">
+                <p class="headline-3">Преимущества и недостатки зимней установки</p>
+                <p>
+                  Кондиционеры, купленные зимой, можно установить сразу или дождаться весны. Монтаж сплит-систем в
+                  холодное время года имеет свои плюсы и минусы. Рассмотрим их.
+                </p>
+                <p>Преимущества:</p>
+                <p>
+                  <span class="color-main">1.</span> Незагруженный график мастеров по установке. Специалисты произведут
+                  монтаж в любое удобное для клиента время. Не нужно ждать неделями своей очереди.
+                </p>
+                <p>
+                  <span class="color-main">2.</span> Отсутствие спешки в монтажной работе обеспечивает качественный
+                  результат.
+                </p>
+                <p>
+                  <span class="color-main">3.</span> Современные сплит-системы имеют несколько режимов, в том числе
+                  обогрева. Установленный зимой кондиционер при необходимости можно будет использовать и в качестве
+                  отопительного прибора.
+                </p>
+                <p>
+                  <span class="color-main">4.</span> Цены на установку кондиционеров в зимний сезон всегда ниже, а
+                  значит, клиент сможет неплохо сэкономить личной бюджет на этой услуге.
+                </p>
+                <p class="headline-3">Недостатки:</p>
+                <p>
+                  <span class="color-main">1.</span> Невозможно проверить работу оборудования на охлаждение, если за
+                  окном меньше +15-200.
+                </p>
+                <p><span class="color-main">2.</span> При морозе провода становятся ломкими и жесткими.</p>
+                <p>
+                  <span class="color-main">3.</span> При запуске оборудования на проверку при температуре меньше +150
+                  есть риски поломки компрессора. Чтобы исключить подобные последствия, рекомендуется приобретать
+                  специальное устройство для зимнего запуска кондиционера, позволяющего функционировать прибору при
+                  температуре до –150.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Чем различаются мультисплит-система и обычная сплит-система?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Обычная сплит-система – это один наружный блок и один внутренний. Она предусмотрена для обогрева или
+                  охлаждения только одного помещения. Мультисплит-система – это один наружный блок и несколько
+                  внутренних, причем количество внутренних блоков может составлять от 2 до 8. Основные функции у этих
+                  двух систем совершенно одинаковы.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Можно ли после установки кондиционера перевесить внутренний блок на другое место?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Переместить внутренний блок сплит-системы после окончательной установки, конечно, можно, но при этом
+                  нужно будет учитывать некоторые детали. Поэтому лучше доверить перемещение внутреннего или внешнего
+                  блока специалистам, у которых имеется необходимое оборудование, помогающее решить эту проблему
+                  максимально быстро и безопасно.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Возможна ли установка настенной системы кондиционирования вплотную у потолка?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  У настенных кондиционеров процесс забора воздуха для обеспечения охлаждения или обогрева
+                  осуществляется с верхней стороны внутреннего блока. Именно поэтому нельзя устанавливать кондиционер
+                  прямо под потолком. Расстояние между блоком и потолочным покрытием должно составлять не менее 10 см.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Будет ли сплит-система потреблять электроэнергию в выключенном состоянии?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Находясь в режиме ожидания, сплит-система все равно потребляет электроэнергию, но это количество
+                  совсем незначительное и составляет несколько Ватт.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Можно ли самому очищать фильтры и проводить ТО кондиционера?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Самостоятельно организовать полноценное обслуживание климатической системы не получится в любом
+                  случае. Для этого нужно специальное оборудование и опыт работы промышленным альпинистом. А вот
+                  прочистить систему фильтрации внутреннего блока можно и самому. Тем более от этого зависит состояние
+                  собственного здоровья..
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Будет ли сплит-система потреблять электроэнергию в выключенном состоянии?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Самостоятельно организовать полноценное обслуживание климатической системы не получится в любом
+                  случае. Для этого нужно специальное оборудование и опыт работы промышленным альпинистом. А вот
+                  прочистить систему фильтрации внутреннего блока можно и самому. Тем более от этого зависит состояние
+                  собственного здоровья.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>Для чего предусмотрен отвод дренажа?</h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Когда кондиционер работает на охлаждение, то в результате интенсивного теплообмена во внутреннем блоке
+                  конденсируется влага. Жидкость скапливается в специальной емкости до определенного уровня, а затем
+                  выводится по отводящей трубке, которая, в свою очередь, может быть выведена на улицу или подключена к
+                  канализационной системе.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>Как сильно шумит кондиционер во время работы?</h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Современные сплит-системы работают практически бесшумно, благодаря чему совершенно не доставляют
+                  дискомфорта ни днем, ни ночью. Кондиционеры On/Off имеют минимальный уровень звука 25 Дб, у
+                  инверторных сплит-систем этот показатель составляет от 19 Дб. Кроме этого многие кондиционеры оснащены
+                  специальным ночным режимом работы, при котором уровень шума снижается на несколько Дб.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="headline-2">Вентиляция</div>
+          <div class="accordion-list">
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Чему отдать предпочтение: нескольким сплит-системам и отдельной системе приточно-вытяжной вентиляции или
+                единой системе вентиляции с центральным кондиционером?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Каждый вариант по-своему неплохой, но отличается друг от друга затратами и возможностями. В первом
+                  случае можно поддерживать разную температуру в кондиционируемом помещении. То есть, в каждой из комнат
+                  может быть установлена своя комфортная температура. Но этот вариант будет более дорогостоящим, чем
+                  второй, так как в каждом отдельно взятом помещении придется установить свой внутренний блок
+                  кондиционера. Так же важно обусловить размещение внешних блоков сплит-систем.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Как поступить, если в доме отсутствует дымоход?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Если при проектировании в доме не установили обычный дымоход, то отличной альтернативой станет
+                  коаксиальный дымоход, который состоит из двух труб разного диаметра, расположенных одна в другой.
+                  Через трубу большего диаметра посредством мощного вентилятора воздух нагнетается в топку для горения,
+                  а через вторую - выбрасываются дымовые газы. В зависимости от предпочтений хозяина, можно установить
+                  горизонтальный или вертикальный коаксиальный дымоход. Выходом из положения так же может стать
+                  электрический котел, в котором дымоход не предусмотрен. Правда, нужно помнить, что котел мощностью
+                  4,5-7,5 кВт питается от напряжения 220 В, а вот более мощный 18-60 кВт – от трехфазного напряжения,
+                  что потребует затрат на покупку и установку нового силового кабеля и времени на получение разрешения
+                  на отпуск электроэнергии. Поэтому следует оценить, насколько соразмерны затраты и сделать правильный
+                  выбор – установить обычный вертикальный дымоход.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Чем канальная вентиляция отличается от бесканальной?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Системы канальной вентиляции – это разветвленная сеть воздуховодов, по которой перемещается воздух.
+                  Бесканальная вентиляция не использует сеть воздуховодов, гораздо проще в технической реализации,
+                  требует меньших затрат, но не обеспечивает настолько эффективный воздухообмен, как канальная
+                  вентиляция.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>Как работает местная вентиляция?</h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Работа местной (локализующей) вентиляции основана на следующем принципе: все вредные вещества
+                  удаляются конкретно с места образования. В данном случае проблему вентиляции решают при помощи
+                  комбинированной системы, в состав которой входят общеобменная вентиляция и местные вытяжные системы.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Что вы можете сказать о общеобменной вентиляции?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Общеобменная вентиляция устанавливается в помещении тогда, когда все вредные вещества (пыль, влага,
+                  газы и пр.) поступают непосредственно в воздух этого же помещения. В этом случае производиться расчет
+                  объема вытяжного воздуха с тем условием, чтобы приточный воздух мог его заменить до предельно
+                  допустимой концентрации загрязнений (ПДК). Если приток воздуха не равен вытяжке, то недостающий обмен
+                  воздуха подкачивается из соседних помещений или через проемы наружных ограждений.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Чем характеризуются приточно-вытяжные системы вентиляции?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Они являются наиболее эффективным вариантом вентиляции, поэтому и устанавливаются чаще других. В
+                  процессе их работы подача воздуха осуществляется приточной системой, а удаление – вытяжной. При этом
+                  обе системы работают одновременно. Их работа должна быть организована таким образом, чтоб
+                  производительность была одинаковой. В противном случае возникнет эффект «хлопающих дверей».
+                  Приточно-вытяжные вентиляции могут разрабатываться на основе вентиляционных установок или состоять из
+                  отдельных частей системы.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>Как управлять приточной системой вентиляции?</h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Вентиляция современных помещений зачастую осуществляется при помощи небольших вентиляционных систем –
+                  сети воздуховодов с приточной установкой, управлять которой достаточно просто и удобно с помощью
+                  выносного пульта управления. Он обеспечивает пятиступенчатую регулировку подачи воздуха и позволяет в
+                  зимний период регулировать температуру в диапазоне от 5 до 28°С. Некоторые из приборов оборудованы
+                  таймерами, позволяющими устанавливать время и дату включения и выключения. Кроме того, к приточной
+                  системе вентиляции можно подключить внешний вытяжной вентилятор. В данном случае синхронное включение
+                  и выключение обеспечивает автоматика. Управление на случай аварии или перегрева оснащено системой
+                  защиты, которая сигнализирует при помощи аварийной лампы и останавливает вентилятор. На нагревательных
+                  элементах калорифера установлены термостаты, которые предохраняют от возможности пожара. Кроме того,
+                  на приточных системах можно установить дифференциальный манометр, с помощью которого измеряется
+                  перепад динамического давления в потоке воздуха на участке между воздушным фильтром и отсечным
+                  клапаном. В момент остановки агрегата поступление наружного воздуха блокирует заслонка.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="headline-2">Отопление</div>
+          <div class="accordion-list">
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Чем отличаются котлы с открытой камерой сгорания от моделей с закрытой камерой?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Настенные котлы бывают с открытой камерой сгорания и закрытой. В котлах с открытой камерой сгорания
+                  забор воздуха для горения производиться непосредственно из помещения, в котором они расположены. При
+                  этом для удаления отработанных газов естественным способом в дымоход в помещении необходимо обеспечить
+                  хорошую вентиляцию. В котлах с закрытой камерой сгорания процесс организован иначе: при помощи
+                  вентилятора воздух принудительно подается в камеру сгорания и аналогично выбрасывается в дымоход.
+                  Забор воздуха с помощью такого котла может производиться как из помещения, так и с улицы. Конструкция
+                  котла максимально проста – труба в трубе. По одной из труб происходит забор воздуха, по другой – его
+                  выброс в дымоход.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Какой нагревательный кабель подходит для обогрева пола?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Если вы хотите обеспечить только небольшое повышение температуры пола, то следует отдать предпочтение
+                  экономичному комплекту (мощность 100-150 Вт на 1 м²). Для более эффективного подогрева или в случае,
+                  если под комнатой находиться прохладное помещение, больше подходит оптимальный комплект (мощность
+                  150-200 Вт на 1 м²). В помещении, где имеются большие теплопотери, например, на остекленном балконе
+                  или гараже, целесообразно применять комплект увеличенной мощности (мощность свыше 200 Вт на 1 м²).
+                  Кабель такой мощности подходит и для того, чтобы подогреть грунт в зимнем саду или оранжерее. Для
+                  расчета необходимой площади следует из общей площади помещения вычесть площадь, занятую мебелью, а на
+                  оставшиеся участки положить теплый пол.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>Правда ли, что конвекторы сжигают кислород?</h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Это зависит от типа конвектора. В старых образцах, которые выпускались раньше, была установлена
+                  электрическая спираль, которая раскалялась и не только сжигала кислород, но и была далеко не
+                  безопасна. Конструкция современных приборов существенно отличается. Нагревательный элемент в них имеет
+                  форму оребренной трубки, которая имеет большую площадь поверхности. Поэтому температура такого ТЭНа
+                  существенно ниже и не сжигает кислород.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Что можно предпринять, если рабочее помещение промерзает насквозь?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  В помещениях цехов использовать обычные батареи отопления нерационально, так как теплый воздух
+                  концентрируется на большой высоте. Поэтому оптимальным вариантом для цеха будут инфракрасные
+                  обогреватели. Принцип работы этих приборов напоминает действие лучей солнца, которые греют не воздух,
+                  а предметы и, в частности, людей. Уже от предметов нагревается сам воздух. С помощью инфракрасных
+                  обогревателей удобно создавать комфортный микроклимат в большом помещении, где нужно оборудовать
+                  несколько рабочих мест.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Какие отличия между тепловой пушкой и бытовым тепловентилятором?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  В бытовых тепловентиляторах установлена тонкая спираль, которая, раскаляясь до температуры 1200°С,
+                  сжигает кислород, пыль и создают пожароопасную обстановку. В отличие от тепловентилятора, в тепловой
+                  пушке в качестве нагревательного элемента выступает стальной ТЭН, температура которого значительно
+                  ниже. Такой прибор может выдерживать интенсивный режим работы, не боится механических повреждений и
+                  может использоваться в самых жестких условиях строек, гаражей, мастерских.
+                </p>
+              </div>
+            </div>
+            <div class="item">
+              <h3 class="headline-3 accordion-title" data-open-block>
+                Как можно обеспечить обогрев в кафе, где дверь очень часто открывается?
+              </h3>
+              <div class="accordion-dropdown">
+                <p>
+                  Так как дверь вашего кафе является основным источником теплопотерь, то акцентировать внимание нужно
+                  именно на ней. И масляный радиатор в данном случае не поможет. Оптимальным выходом в данной ситуации
+                  станет тепловая завеса. Располагаясь над входной дверью, она создает мощную теплую струю воздуха,
+                  которая не позволяет холоду проникать в помещение. Основное, правильно подобрать габариты и
+                  производительность прибора, которые позволят сэкономить до 90% тепла.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hr"></div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="column">
+            <div class="item">
+              <div class="title"><a href="#1">Кондиционеры</a></div>
+            </div>
+            <div class="item">
+              <div class="title"><a href="#1">О нас</a></div>
+            </div>
+            <div class="item">
+              <div class="title"><a href="#1">Монтаж</a></div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="item">
+              <div class="title"><a href="#1">Сервис</a></div>
+            </div>
+            <div class="item">
+              <div class="title"><a href="#1">Доставка и оплата</a></div>
+            </div>
+            <div class="item">
+              <div class="title"><a href="#1">Контакты</a></div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="item contacts"><span class="icon"></span> <span class="address">Москва</span></div>
+            <div class="item contacts"><span class="icon"></span> <a class="phone">+7 (499) 922-89-74</a></div>
+            <div class="item contacts"><span class="icon"></span> <a class="email">contact@mail.ru</a></div>
+          </div>
+        </div>
+        <div class="footer-social-block">
+          <div class="social-row">
+            <div class="vk"></div>
+            <div class="ok"></div>
+            <div class="insta"></div>
+          </div>
+        </div>
+        <div class="footer-info"><div class="copyright">© 2022 ООО «SW-CLIMAT»</div></div>
+      </div>
+    </div>
+    <div class="overlay">
+      <div class="modal" id="consultation">
+        <div class="modal_close">&times;</div>
+        <div class="modal_title">Просто заполните форму заявки</div>
+        <div class="modal_description">и мы перезвоним вам в течении 10 минут</div>
+        <form class="feed-form margin-top-x2" action="#1">
+          <input name="f_name" placeholder="Ваше имя" /> <input name="f_phone" placeholder="Ваш телефон" />
+          <input name="f_email" placeholder="Ваш e-mail" type="email" />
+          <button class="button submit">Заказать консультацию</button>
+        </form>
+      </div>
+      <div class="modal" id="order">
+        <div class="modal_close">&times;</div>
+        <div class="modal_title">Ваш заказ:</div>
+        <div class="modal_description">Пульсометр Polar FT1</div>
+        <form class="feed-form margin-top-x2" action="#1">
+          <input name="f_name" required placeholder="Ваше имя" />
+          <input name="f_phone" required placeholder="Ваш телефон" />
+          <input name="f_email" required placeholder="Ваш e-mail" type="email" />
+          <button class="button submit">Купить</button>
+        </form>
+      </div>
+      <div class="modal mini hide" id="thanks">
+        <div class="modal_close">&times;</div>
+        <div class="modal_title">Спасибо за вашу заявку!</div>
+        <div class="modal_description">Наш менеджер свяжется с вами в ближайшее время!</div>
+      </div>
+    </div>
+  </body>
+</html>

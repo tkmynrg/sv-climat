@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"
+      name="viewport"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#0032a0" />
+    <meta name="msapplication-TileColor" content="#0032a0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta content="#1eb53a" name="msapplication-TileColor" />
+    <title>Sw-climat</title>
+    <script defer="defer" src="./js/vendors.bundle.js"></script>
+    <script defer="defer" src="./js/polyfills.bundle.js"></script>
+    <script defer="defer" src="./js/bundle.bundle.js"></script>
+    <script defer="defer" src="./js/style.bundle.js"></script>
+    <link href="./css/style.bundle.css" rel="stylesheet" />
+  </head>
+  <body class="load">
+    <header class="header hide-mobile" id="header">
+      <div class="container header-container">
+        <div class="header-top">
+          <div class="header-left-content"><a class="logo" href="/"></a></div>
+          <div class="header-right-content">
+            <div class="address">Москва и московсская область</div>
+            <div class="time">Пн.-пт. с 9:00 до 18:00</div>
+            <div class="phone-call">
+              <a class="phone" href="tel:84999228974">+7 (499) 922-89-74</a>
+              <a class="button no-margin-vertical callback-header" data-modal="consultation">заказать звонок</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-lower menu">
+        <div class="container">
+          <div class="item-list">
+            <div class="item">
+              <a class="link" href="/catalog.html"><span class="text">Каталог</span></a>
+              <div class="submenu">
+                <div class="items">
+                  <a href="#1" class="submenu-link">Сплит системы </a><a href="#1" class="submenu-link">Кондиционеры</a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <a class="link" href="/about.html"><span class="text">О нас</span></a>
+            </div>
+            <div class="item">
+              <a class="link" href="/mounting.html"><span class="text">Монтаж</span></a>
+            </div>
+            <div class="item">
+              <a class="link" href="/services.html"><span class="text">Сервис</span></a>
+            </div>
+            <div class="item">
+              <a class="link" href="/delivery.html"><span class="text">Доставка и оплата</span></a>
+            </div>
+            <div class="item">
+              <a class="link" href="/contacts.html"><span class="text">Контакты</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile hide-desktop fixed">
+      <div class="container">
+        <div class="content">
+          <a href="/" class="logo"><img src="./img/sw-logo.svg" alt="Лого" class="img" /> </a
+          ><button class="burger mobile-menu-toggle-button hide-desktop">
+            <span class="line top"></span> <span class="line center"></span> <span class="line bottom"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile_menu" class="mobile-menu">
+      <div class="menu-list one" data-toggle-holder>
+        <div class="item">
+          <a href="#" class="link icon-down" data-toggle-btn><span class="text">Каталог</span></a>
+          <div class="submenu" data-hidden-content>
+            <a href="#" class="submenu-link"><span class="text">Сплит-системы</span></a>
+            <a href="#" class="submenu-link"><span class="text">Кондиционеры</span></a>
+            <a href="#" class="submenu-link"><span class="text">Бризеры</span></a>
+          </div>
+        </div>
+        <div class="item">
+          <a href="/about.html" target="_blank" class="link"><span class="text">О нас</span></a>
+        </div>
+        <div class="item">
+          <a href="#" target="_blank" class="link"><span class="text">Монтаж</span></a>
+        </div>
+        <div class="item">
+          <a href="#" target="_blank" class="link"><span class="text">Сервис</span></a>
+        </div>
+        <div class="item">
+          <a href="/delivery.html" target="_blank" class="link"><span class="text">Доставка и оплата</span></a>
+        </div>
+        <div class="item">
+          <a href="/contacts.html" target="_blank" class="link"><span class="text">Контакты</span></a>
+        </div>
+        <div class="item">
+          <div class="link icon-down" data-toggle-btn>ЕЩЕ <span class="bulls"></span></div>
+          <div class="submenu data-hidden-content" data-hidden-content>
+            <a href="#" class="submenu-link arrow-link small-up-right"><span class="text">Страница 1</span></a>
+            <a href="#" class="submenu-link"><span class="text">Страница 2</span></a>
+            <a href="#" class="submenu-link"><span class="text">Страница 3</span></a>
+            <a href="#" class="submenu-link"><span class="text">Страница 4</span></a>
+            <a href="#" class="submenu-link"><span class="text">Страница 5</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="body about">
+      <div class="section no-padding-top">
+        <div class="container">
+          <div class="breadcrumbs">
+            <a href="#1" class="item link">Главная</a> / <a href="#1" class="item">О нас</a>
+          </div>
+          <div class="about-row">
+            <div class="img"><img data-src="/img/about/about_1.jpg" alt="time" class="lozad first" /></div>
+            <div class="text">
+              <p>
+                Компания <span class="font-weight-bold color-main">SW-CLIMAT</span> — это сплочённая команда
+                профессионалов.
+              </p>
+              <p>Цель компании — взять на себя все проблемы создания уютного климата.</p>
+              <p>
+                Мы уверены в своих силах, потому, что сделали ставку на самые современные и функциональные технологии
+                кондиционирования.
+              </p>
+              <p>Преимущества сотрудничества с нами:</p>
+              <p>cкорость и качество обслуживания,</p>
+              <p>наличие службы постоянной технической поддержки клиентов,</p>
+              <p>разработка индивидуальных схем работы с частными и корпоративными клиентами,</p>
+              <p>большой выбор моделей кондиционеров на любой вкус и кошелёк.</p>
+              <p>
+                Гарантии: это опыт, современное техническое оснащение, долгосрочная и юридически оформленная уверенность
+                в завтрашнем дне.
+              </p>
+              <p>Ценовая политика: это гибкая система скидок как для наших новых клиентов, так и для постоянных.</p>
+              <p>
+                Мы предлагаем широкий перечень всех услуг монтажа и технического обслуживания систем кондиционирования
+                на максимально высоком уровне.
+              </p>
+              <p>Мы постоянно совершенствуемся, растём, развиваемся, повышаем уровень качества работы.</p>
+              <p>
+                Стиль бизнеса <span class="font-weight-bold color-main">SW-CLIMAT</span> — ориентация на
+                будущее,стремление к новым высотам!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hr"></div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="column">
+            <div class="item">
+              <div class="title"><a href="#1">Кондиционеры</a></div>
+            </div>
+            <div class="item">
+              <div class="title"><a href="#1">О нас</a></div>
+            </div>
+            <div class="item">
+              <div class="title"><a href="#1">Монтаж</a></div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="item">
+              <div class="title"><a href="#1">Сервис</a></div>
+            </div>
+            <div class="item">
+              <div class="title"><a href="#1">Доставка и оплата</a></div>
+            </div>
+            <div class="item">
+              <div class="title"><a href="#1">Контакты</a></div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="item contacts"><span class="icon"></span> <span class="address">Москва</span></div>
+            <div class="item contacts"><span class="icon"></span> <a class="phone">+7 (499) 922-89-74</a></div>
+            <div class="item contacts"><span class="icon"></span> <a class="email">contact@mail.ru</a></div>
+          </div>
+        </div>
+        <div class="footer-social-block">
+          <div class="social-row">
+            <div class="vk"></div>
+            <div class="ok"></div>
+            <div class="insta"></div>
+          </div>
+        </div>
+        <div class="footer-info"><div class="copyright">© 2022 ООО «SW-CLIMAT»</div></div>
+      </div>
+    </div>
+    <div class="overlay">
+      <div class="modal" id="consultation">
+        <div class="modal_close">&times;</div>
+        <div class="modal_title">Просто заполните форму заявки</div>
+        <div class="modal_description">и мы перезвоним вам в течении 10 минут</div>
+        <form class="feed-form margin-top-x2" action="#1">
+          <input name="f_name" placeholder="Ваше имя" /> <input name="f_phone" placeholder="Ваш телефон" />
+          <input name="f_email" placeholder="Ваш e-mail" type="email" />
+          <button class="button submit">Заказать консультацию</button>
+        </form>
+      </div>
+      <div class="modal" id="order">
+        <div class="modal_close">&times;</div>
+        <div class="modal_title">Ваш заказ:</div>
+        <div class="modal_description">Пульсометр Polar FT1</div>
+        <form class="feed-form margin-top-x2" action="#1">
+          <input name="f_name" required placeholder="Ваше имя" />
+          <input name="f_phone" required placeholder="Ваш телефон" />
+          <input name="f_email" required placeholder="Ваш e-mail" type="email" />
+          <button class="button submit">Купить</button>
+        </form>
+      </div>
+      <div class="modal mini hide" id="thanks">
+        <div class="modal_close">&times;</div>
+        <div class="modal_title">Спасибо за вашу заявку!</div>
+        <div class="modal_description">Наш менеджер свяжется с вами в ближайшее время!</div>
+      </div>
+    </div>
+  </body>
+</html>
